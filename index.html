@@ -72,7 +72,7 @@ section {
 
     #section3 {
       background-color: #4a8dc0;
-      height: 1000px;
+      height: 500px;
       position: relative;
     }
 
@@ -91,7 +91,7 @@ section {
     } 
     
     #section5 {
-      background-color: #ca5fca;
+      background-color: #ff0000;
       #scrollContainer {
       position: absolute;
       top: 100;
@@ -100,7 +100,7 @@ section {
       right: 0;
       margin: auto;
       width: 80%;
-      height: 80%;
+      height: 35%;
     }
     
     }
@@ -314,7 +314,7 @@ section {
   <section id="section5">
     <div id="scrollContainer">
       <img id="scrollImage" src="src/asset/piza/1.png" alt="Scroll Image">
-      <div id="scrollContainer" style="width: 768px; height: 464px;">
+      <div id="scrollContainer" style="width: 768px; height: 464px; ;">
         <!-- Your content goes here -->
       </div>
     </div>
@@ -441,6 +441,7 @@ section {
 
     // Your JavaScript code for section 5 goes here
 
+    
     const scrollContainer = document.getElementById('scrollContainer');
     const scrollImage = document.getElementById('scrollImage');
     const totalImages = 19;
@@ -450,7 +451,7 @@ section {
     window.addEventListener('scroll', () => {
       if (scrollEnabled) {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        const containerOffsetTop = scrollContainer.offsetTop;
+        const containerOffsetTop = section5.offsetTop;
         const containerHeight = scrollContainer.offsetHeight;
         const imageIndex = Math.floor(((scrollPosition - containerOffsetTop) / containerHeight) * totalImages) + 1;
 
